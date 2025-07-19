@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <!-- Tailwind_css_cdn_link -->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+"
+      rel="stylesheet"
+    />
+    <!-- font_awesome_cdn_link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Offer bar -->
+    <div
+      id="offerbar"
+      class="flex justify-center gap-12 items-center bg-black w-full text-white p-4"
+    >
+      <p class="text-sm md:text-base">
+        Sign Up and <b>GET 20% OFF</b> for your first Order
+      </p>
+      <div id="closeoff">
+        <i class="fa-solid fa-xmark cursor-pointer ml-4"></i>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <section class="sticky top-0 left-0 z-40 bg-white">
+      <div>
+        <nav class="flex justify-between py-4 px-5 shadow-xl">
+          <div class="flex gap-3 items-center">
+            <i class="fa-solid fa-gamepad fa-xl"></i>
+            <h1 class="font-bold text-2xl">GameWorld</h1>
+          </div>
+          <div
+            class="navbar_links items-center gap-8 font-semibold hidden md:flex"
+          >
+            <p><a href="./">Home</a></p>
+            <p><a href="./#pre_order">Pre-Orders</a></p>
+            <p><a href="./#best_seller">Best Seller</a></p>
+            <p><a href="product.html">Product & Accessories</a></p>
+            <p>
+              <a href="cart.html"
+                ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+              >
+            </p>
+            <p><a href="contact.html">Contact Us</a></p>
+          </div>
+          <div id="menuicon" class="md:hidden">
+            <i class="fa-solid fa-bars fa-xl cursor-pointer"></i>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- side_navbar -->
+    <section
+      id="sidenav"
+      class="bg-gray-900 fixed z-40 top-0 transition-all duration-1000"
+      style="width: 50%; height: 100vh; right: -50%"
+    >
+      <div id="closenav" class="text-right p-6">
+        <p class="text-white inline cursor-pointer">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+      </div>
+      <div class="navbar_links flex flex-col items-center gap-8 font-semibold">
+        <p class="text-white"><a href="./">Home</a></p>
+        <p class="text-white"><a href="./#pre_order">Pre-Orders</a></p>
+        <p class="text-white"><a href="./#best_seller">Best Seller</a></p>
+        <p class="text-white">
+          <a href="product.html">Product & Accessories</a>
+        </p>
+        <p class="text-white">
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+        </p>
+        <p class="text-white"><a href="contact.html">Contact Us</a></p>
+      </div>
+    </section>
+
+    <!-- contact_area -->
+
+    <!-- Header -->
+    <h1 class=" p-4 text-center text-2xl font-bold">
+      Contact Us - <span class="text-red-600">GameWorld</span>
+    </h1>
+
+    <!-- Contact Section -->
+    <section class="max-w-6xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <h2 class="text-3xl font-semibold">Get in Touch</h2>
+        <p>Need help with your order or have questions? We're here to assist!</p>
+        
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Customer Support</h3>
+          <p><i class="fas fa-envelope mr-2 text-red-600"></i> support@gameworld.com</p>
+          <p><i class="fas fa-phone mr-2 text-red-600"></i> +91 98765 43210</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Our Store</h3>
+          <p><i class="fas fa-map-marker-alt mr-2 text-red-600"></i> 123 Gamer Street, Chennai, India</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Business Hours</h3>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold mb-4">Send Us a Message</h2>
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium">Name</label>
+            <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Email</label>
+            <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Message</label>
+            <textarea name="message" rows="4" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-red-600 text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+      <div
+        class="grid grid-cols-3 gap-10 py-5 mt-10 px-5 bg-black md:flex md:flex-row md:justify-around"
+      >
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Customer Care</h2>
+          <p class="text-gray-200 text-sm">Contact Us</p>
+          <p class="text-gray-200 text-sm">Shipping & Delivery</p>
+          <p class="text-gray-200 text-sm">Pre-Orders</p>
+          <p class="text-gray-200 text-sm">Returns & Exchanges</p>
+          <p class="text-gray-200 text-sm">Warranties</p>
+          <p class="text-gray-200 text-sm">Digital Products (DLC)</p>
+          <p class="text-gray-200 text-sm">Used & Trade</p>
+          <p class="text-gray-200 text-sm">EDGE Loyalty Program</p>
+          <p class="text-gray-200 text-sm">Sales Channels</p>
+          <p class="text-gray-200 text-sm">Accessibility</p>
+          <p class="text-gray-200 text-sm">Klarna - Buy Now Pay Later</p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Careers</h2>
+          <p class="text-gray-200 text-sm">Careers</p>
+          <p class="text-gray-200 text-sm">LinkedIn</p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Services</h2>
+          <p class="text-gray-200 text-sm">Edge Rewards</p>
+          <p class="text-gray-200 text-sm">Gift Cards</p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Legal</h2>
+          <p class="text-gray-200 text-sm">Privacy Policy</p>
+          <p class="text-gray-200 text-sm">
+            Terms and Conditions of Purchase and Use
+          </p>
+          <p class="text-gray-200 text-sm">
+            Edge Loyalty Program Terms and Conditions
+          </p>
+          <p class="text-gray-200 text-sm">
+            Product Protection Plan and Game Play Guarantee Terms and Conditions
+          </p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Social</h2>
+          <div class="mt-2 space-x-2">
+            <i class="fa-brands fa-facebook fa-xl text-white"></i>
+            <i class="fa-brands fa-x-twitter fa-xl text-white"></i>
+            <i class="fa-brands fa-instagram fa-xl text-white"></i>
+            <i class="fa-brands fa-youtube fa-xl text-white"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-200 py-4 px-4 md:px-24 bg-black">&copy;GameWorld</p>
+    </section>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

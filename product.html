@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <!-- Tailwind_css_cdn_link -->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+"
+      rel="stylesheet"
+    />
+    <!-- font_awesome_cdn_link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Offer bar -->
+    <div id="offerbar"
+      class="flex justify-center gap-12 items-center bg-black w-full text-white p-4"
+    >
+      <p class="text-sm md:text-base">
+        Sign Up and <b>GET 20% OFF</b> for your first Order
+      </p>
+      <div id="closeoff">
+        <i class="fa-solid fa-xmark cursor-pointer ml-4"></i>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <section class="sticky top-0 left-0 z-40 bg-white">
+      <div>
+        <nav class="flex justify-between py-4 px-5 shadow-xl">
+          <div class="flex gap-3 items-center">
+            <i class="fa-solid fa-gamepad fa-xl"></i>
+            <h1 class="font-bold text-2xl">GameWorld</h1>
+          </div>
+          <div
+            class="navbar_links items-center gap-8 font-semibold hidden md:flex"
+          >
+            <p><a href="./">Home</a></p>
+            <p><a href="./#pre_order">Pre-Orders</a></p>
+            <p><a href="./#best_seller">Best Seller</a></p>
+            <p><a href="product.html">Product & Accessories</a></p>
+            <p>
+              <a href="cart.html"
+                ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+              >
+            </p>
+            <p><a href="contact.html">Contact Us</a></p>
+          </div>
+          <div id="menuicon" class="md:hidden">
+            <i class="fa-solid fa-bars fa-xl cursor-pointer"></i>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- side_navbar -->
+    <section
+      id="sidenav"
+      class="bg-gray-900 fixed z-40 top-0 transition-all duration-1000"
+      style="width: 50%; height: 100vh; right: -50%"
+    >
+      <div id="closenav" class="text-right p-6">
+        <p class="text-white inline cursor-pointer">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+      </div>
+      <div class="navbar_links flex flex-col items-center gap-8 font-semibold">
+        <p class="text-white"><a href="./">Home</a></p>
+        <p class="text-white"><a href="./#pre_order">Pre-Orders</a></p>
+        <p class="text-white"><a href="./#best_seller">Best Seller</a></p>
+        <p class="text-white">
+          <a href="product.html">Product & Accessories</a>
+        </p>
+        <p class="text-white">
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+        </p>
+        <p class="text-white"><a href="contact.html">Contact Us</a></p>
+      </div>
+    </section>
+
+    <!-- product -->
+    <section>
+      <div class="flex justify-between">
+        <!-- sidebar -->
+        <div class=" w-2/6               md:w-1/6 bg-gray-900 px-7">
+          <p class="font-bold text-white text-xl mt-10 py-2">Console</p>
+          <div>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="PC" /> PC
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="PS2" /> Play
+              Station 2
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="PS3" /> Play
+              Station 3
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="PS4" /> Play
+              Station 4
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="PS5" /> Play
+              Station 5
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="XBOX" />
+              XBOX
+            </p>
+          </div>
+          <p class="font-bold text-white text-xl mt-10 py-2">Accessories</p>
+          <div>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="CS" />
+              Console
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="HD" /> Hard
+              Disk
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="CD" /> Game
+              CD
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="CR" />
+              Controller
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="HP" />
+              Headphones
+            </p>
+          </div>
+          <p class="font-bold text-white text-xl mt-10 py-2">Arrivals</p>
+          <div>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="NW" /> New
+            </p>
+            <p class="text-white">
+              <input type="checkbox" class="filter-checkbox" value="OD" /> Old
+            </p>
+          </div>
+        </div>
+        <!-- product_side -->
+        <div class="w-full bg-gray-200 py-5 px-5">
+          <!-- input_searchbar -->
+          <div class="mb-6">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search products..."
+              class="w-full  px-4 py-2 border border-gray-500 rounded-full focus:outline-none "
+            />
+          </div>
+
+          <div
+            id="product_contianer"
+            class="flex justify-evenly gap-4 flex-wrap"
+          >
+            <!-- Card1 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS2,PS3,PS4,CD,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-cover rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    God of War III | video Game Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹3,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹2,999</p>
+                  <p class="text-xs text-gray-500 mt-1">
+                    PC Game, PS2, PS3, PS4
+                  </p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card2 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS3,CR,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs1.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    EasySMX Ps3 Wired Game Controller For Microsoft Xbox 360
+                    Game System Joystick With Dual-Vibration Turbo & Trigger
+                    Buttons For Windows/ Android/ Ps3/ Tv Box, Not Xbox 360
+                    Console (Black)
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">53% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹11,600</p>
+                  <p class="text-green-600 font-semibold text-sm">₹5,446</p>
+                  <p class="text-xs text-gray-500 mt-1">PS3</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card3 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS3,PS4,PS5,CD,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs2.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-fill rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Red Dead Redemption 2 | video Game Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">23% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹3999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹1999</p>
+                  <p class="text-xs text-gray-500 mt-1">
+                    PC Game, PS3, PS4,PS5
+                  </p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card4 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="XBOX,HD,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs3.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-fill rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Seagate Game Drive for Xbox 4TB External Hard Drive Portable
+                    HDD - USB 3.2 Gen 1, Black with Built-in Green LED bar, Xbox
+                    Certified, 3 Year Rescue Services (STKX4000402)
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">32% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹18,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹12,999</p>
+                  <p class="text-xs text-gray-500 mt-1">XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card5 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS5,CR,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs4.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Sony Dualsense Usb Type A Charging Station For Playstation
+                    (Playstation5),Multicolor
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">27% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹2,590</p>
+                  <p class="text-green-600 font-semibold text-sm">₹1,899</p>
+                  <p class="text-xs text-gray-500 mt-1">PS5</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card6 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS5,CR,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs5.jpg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    PSS PS5 Controller Skin Vinyl Decal Sticker Protective Cover
+                    Compatible for Play-Station 5 Wireless Controller Gamepad
+                    Skin Accessories (Spider/Man Theme)
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">29% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹699</p>
+                  <p class="text-green-600 font-semibold text-sm">₹499</p>
+                  <p class="text-xs text-gray-500 mt-1">PS5</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card7 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS5,XBOX,CD,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs6.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-fill rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Marvel's Spider-Man Remastered | video Game Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹3,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹2,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PC Game, PS5, XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card8 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS5,CD,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs7.png"
+                  alt="Game"
+                  class="w-60 h-72 object-fill rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Call of Duty: Modern Warfare 3 | video Game Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹3,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹2,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PC Game, PS5</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card9 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS5,XBOX,CD,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs8.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-fill rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Assassin's Creed Mirage | video Game Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹3,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹2,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PC Game, PS5, XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card10 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,XBOX,HP,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs9.jpg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Ant Esports H520W Lightweight Gaming Over Ear Wired
+                    Headphones with Mic| 3.5MM Jack |50 MM Drivers | Compatible
+                    with PC/ PS4 / Xbox One/Nintendo/Mobile (Black)
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">73% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹2,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹799</p>
+                  <p class="text-xs text-gray-500 mt-1">PC, XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card11 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS2,CS,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/br10.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-cover rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Sony PlayStation 2 PS2 Slim Console with Matching Controller
+                    and Accessories
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">15% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹20,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹15,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PS2</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card12 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS2,HD,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs10.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Imported 64MB Memory Card for Sony PlayStation 2 PS2
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">34% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹660</p>
+                  <p class="text-xs text-gray-500 mt-1">PS2</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card13 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS2,CR,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs11.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    GAMENOPHOBIA Wired Dualshock 2 Controller for PlayStation 2
+                    (PS2) with Built-in Vibration Function and Twin Analog
+                    Sticks
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">48% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹516</p>
+                  <p class="text-xs text-gray-500 mt-1">PS2</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card14 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS3,CS,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs12.jpg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    PlayStation 3 500 GB System
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">12% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹25,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹22,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PS3</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card15 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS3,HD,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs13.jpg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    1TB Portable External Hard Drive USB 3.0, High Speed Data
+                    Transfers, Supports Windows, Linux and Mac OS Systems,
+                    Compatible with, PlayStations, TV, and Other Devices.
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">54% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹5,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹2,794</p>
+                  <p class="text-xs text-gray-500 mt-1">PS3</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card16 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS4,CS,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs14.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Sony Playstation 4 Slim Gaming Console (PS4)
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">40% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹34,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹20,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PS4</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card17 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS4,CR,OD"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs15.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Sony Playstation PS DualShock 4 Wireless Controller for
+                    PlayStation 4 - Jet Black for Gaming Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">14% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹6,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹4,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PS4</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card18 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PS5,CS,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs16.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-fill rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    PS5 PlayStation 5
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹51,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹44,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PS5</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card19 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="XBOX,CS,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs17.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    MICROSOFT Xbox One S 1 TB (White, Additional Xbox One
+                    Controller)
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹55,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹49,999</p>
+                  <p class="text-xs text-gray-500 mt-1">XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card20 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="XBOX,CS,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs18.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Xbox 360 4GB Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹22,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹17,999</p>
+                  <p class="text-xs text-gray-500 mt-1">XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card21 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="XBOX,CR,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs19.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Microsoft Xbox 360 Official White Wireless Controller
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">40% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹5,866</p>
+                  <p class="text-green-600 font-semibold text-sm">₹3,999</p>
+                  <p class="text-xs text-gray-500 mt-1">XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card22 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS5, XBOX,CD,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs20.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-cover rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    UNCHARTED: Legacy of Thieves Collection | video Game Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹3,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹2,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PC, PS5, XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card23 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS5,XBOX,HP,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs21.jpg"
+                  alt="Game"
+                  class="w-60 h-72 object-contain bg-white rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Sony INZONE H9, WH-G900N Wireless Noise Cancelling Gaming
+                    Headset, Over Ear Headphones with 360 Spatial Sound, 32
+                    Hours Battery Life, Flip to Mute Mic, Mobile, Laptop, PS5 &
+                    PC Compatible (White)
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">39% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹27,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹16,999</p>
+                  <p class="text-xs text-gray-500 mt-1">PC Game, PS5, XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card24 -->
+            <div
+              class="product-card w-60 bg-white rounded-lg shadow-md flex-shrink-0"
+              data-category="PC,PS5,XBOX,CD,NW"
+            >
+              <div class="relative h-[60%] bg-gray-100">
+                <img
+                  src="./images/bs22.jpeg"
+                  alt="Game"
+                  class="w-60 h-72 object-fill rounded-t-lg"
+                />
+                <div class="absolute bg-white rounded-full p-2 right-2 top-2">
+                  <i class="favorite-icon text-gray-600 z-10 fa-regular fa-heart fa-xl cursor-pointer"></i>
+                </div>
+              </div>
+              <div class="h-[40%] p-3 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-base font-semibold truncate">
+                    Watch Dogs 2: Gold Edition | video Game Console
+                  </h2>
+                  <p class="text-red-600 text-sm font-bold">25% OFF</p>
+                  <p class="text-gray-500 line-through text-sm">₹2,999</p>
+                  <p class="text-green-600 font-semibold text-sm">₹1,799</p>
+                  <p class="text-xs text-gray-500 mt-1">PC, PS5, XBOX</p>
+                </div>
+                <div class="space-y-2 mt-3">
+                  <button
+                    class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 text-sm"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="w-full bg-red-600 text-white py-2 rounded-full hover:bg-red-700 text-sm"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+      <div
+        class="grid grid-cols-3 gap-10 py-5 mt-10 px-5 bg-black md:flex md:flex-row md:justify-around"
+      >
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Customer Care</h2>
+          <p class="text-gray-200 text-sm">Contact Us</p>
+          <p class="text-gray-200 text-sm">Shipping & Delivery</p>
+          <p class="text-gray-200 text-sm">Pre-Orders</p>
+          <p class="text-gray-200 text-sm">Returns & Exchanges</p>
+          <p class="text-gray-200 text-sm">Warranties</p>
+          <p class="text-gray-200 text-sm">Digital Products (DLC)</p>
+          <p class="text-gray-200 text-sm">Used & Trade</p>
+          <p class="text-gray-200 text-sm">EDGE Loyalty Program</p>
+          <p class="text-gray-200 text-sm">Sales Channels</p>
+          <p class="text-gray-200 text-sm">Accessibility</p>
+          <p class="text-gray-200 text-sm">Klarna - Buy Now Pay Later</p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Careers</h2>
+          <p class="text-gray-200 text-sm">Careers</p>
+          <p class="text-gray-200 text-sm">LinkedIn</p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Services</h2>
+          <p class="text-gray-200 text-sm">Edge Rewards</p>
+          <p class="text-gray-200 text-sm">Gift Cards</p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Legal</h2>
+          <p class="text-gray-200 text-sm">Privacy Policy</p>
+          <p class="text-gray-200 text-sm">
+            Terms and Conditions of Purchase and Use
+          </p>
+          <p class="text-gray-200 text-sm">
+            Edge Loyalty Program Terms and Conditions
+          </p>
+          <p class="text-gray-200 text-sm">
+            Product Protection Plan and Game Play Guarantee Terms and Conditions
+          </p>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-red-600 font-bold text-xl mb-2">Social</h2>
+          <div class="mt-2 space-x-2">
+            <i class="fa-brands fa-facebook fa-xl text-white"></i>
+            <i class="fa-brands fa-x-twitter fa-xl text-white"></i>
+            <i class="fa-brands fa-instagram fa-xl text-white"></i>
+            <i class="fa-brands fa-youtube fa-xl text-white"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-200 py-4 px-4 md:px-24 bg-black">&copy;GameWorld</p>
+    </section>
+
+    <script src="product.js"></script>
+  </body>
+</html>
