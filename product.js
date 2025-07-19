@@ -9,8 +9,6 @@ checkboxes.forEach((checkbox) => {
 
     cards.forEach((card) => {
       const categories = card.getAttribute("data-category")?.split(",") || [];
-
-      // Check if any selected value matches the card's categories
       const isMatch =
         selected.length === 0 ||
         selected.some((value) => categories.includes(value));
