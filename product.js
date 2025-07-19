@@ -22,7 +22,7 @@ checkboxes.forEach((checkbox) => {
   });
 });
 
-
+// searchbar
 
 const searchInput = document.getElementById("searchInput");
 
